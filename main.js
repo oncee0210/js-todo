@@ -11,8 +11,8 @@ function addList() {
   renderList();
 }
 
-function deleteList() {
-  console.log("come?");
+function deleteList(li) {
+  console.log(li);
 }
 
 function renderList() {
@@ -52,17 +52,23 @@ function inputReset() {
 $todoInput.addEventListener('focus', inputReset);
 $addBtn.addEventListener('click', addList);
 $todoBoard.addEventListener('click', function(e){
+  /*
   const nodes = [...e.target.parentElement.children];
   const index = nodes.indexOf(e.target);
-  
   console.log(e.target, nodes);
-
-  //console.log(e);
-  /*
-  const hasDelete = e.target.closest('.todo-delete');
-
-  if(!hasDelete) return;
-
-  deleteList();
   */
+  
+
+  //const $li = e.target.closest('li');
+  //let index = $li.index;
+
+  let todoList = e.currentTarget.children[0];
+  let todoList_test = e.currentTarget.children[0];
+
+  todoList.style.backgroundColor = 'green';
+  console.log(todoList_test);
+
+  //if(!hasDelete) return;
+
+  deleteList(todoList);
 });
