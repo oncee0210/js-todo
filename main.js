@@ -3,20 +3,18 @@ const $todoInput = document.querySelector('#todo-input');
 const $addBtn = document.querySelector('#todo-add');
 const $deleteBtn = document.querySelector('.todo-delete');
 let todoList = [];
+let doneStatus = false;
 
 function addList() {
   let todoContent = $todoInput.value;
+  
   todoList.push(todoContent);
-
   renderList();
-
-  console.log(todoList);
 }
 
 function deleteList(idx) {
   todoList.splice(idx, 1);
   renderList();
-  console.log(todoList);
 }
 
 function renderList() {
