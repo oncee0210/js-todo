@@ -17,11 +17,11 @@
 <body>
   <div class="container">
     <div id="todo_wrap" class="shadow p-5 bg-body rounded opacity-75">
-      <!--<h1 class="mb-5 fw-bold">TO-DO</h1>-->
+      <h1 class="mb-5 fw-bold">TO-DO</h1>
 
-      <div class="input-area">
-        <input type="text" id="todo-input">
-        <button type="button" id="todo-add">+</button>
+      <div class="input-area input-group">
+        <input type="text" id="todo-input" class="form-control">
+        <button type="button" id="todo-add" class="btn btn-primary"><i class="bi bi-plus"></i></button>
       </div>
 
       <div id="todo_tab" class="my-4">
@@ -41,7 +41,7 @@
       <div id="todo_list">
         <ul id="todo_list_wrap" class="list-group">
           <li class="list-group-item">
-            <p class="text-center todo-empty">등록된 해야할 일이 없습니다...</p>
+            <p class="text-center todo-empty">There is no registered data.</p>
           </li>
         </ul>
       </div>
